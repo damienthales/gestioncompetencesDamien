@@ -1,0 +1,70 @@
+<div>
+    <h2>Adresses</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="adresse.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Adresse
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span>ID</span></th>
+                    <th><span>Adresse Numero</span></th>
+                    <th><span>Adresse Voie</span></th>
+                    <th><span>Adresse Voie 2</span></th>
+                    <th><span>Adresse Code Postal</span></th>
+                    <th><span>Adresse Ville</span></th>
+                    <th><span>Adresse Pays</span></th>
+                    <th><span>Collaborateur</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="adresse in vm.adresses track by adresse.id">
+                    <td><a ui-sref="adresse-detail({id:adresse.id})">{{adresse.id}}</a></td>
+                    <td>{{adresse.adresseNumero}}</td>
+                    <td>{{adresse.adresseVoie}}</td>
+                    <td>{{adresse.adresseVoie2}}</td>
+                    <td>{{adresse.adresseCodePostal}}</td>
+                    <td>{{adresse.adresseVille}}</td>
+                    <td>{{adresse.adressePays}}</td>
+                    <td>
+                        <a ui-sref="collaborateur-detail({id:adresse.collaborateur.id})">{{adresse.collaborateur.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="adresse-detail({id:adresse.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="adresse.edit({id:adresse.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="adresse.delete({id:adresse.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

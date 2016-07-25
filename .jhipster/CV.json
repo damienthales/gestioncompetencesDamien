@@ -1,0 +1,30 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipType": "many-to-one",
+      "relationshipName": "collaborateur",
+      "otherEntityName": "collaborateur",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipType": "many-to-one",
+      "relationshipName": "rubrique",
+      "otherEntityName": "rubrique",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "dateCv",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "changelogDate": "20160616152938",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "cv"
+}

@@ -1,0 +1,139 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipType": "one-to-many",
+      "relationshipName": "donneeRubrique",
+      "otherEntityName": "rubrique",
+      "otherEntityRelationshipName": "collaborateur"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipType": "one-to-many",
+      "relationshipName": "email",
+      "otherEntityName": "email",
+      "otherEntityRelationshipName": "collaborateur"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipType": "one-to-many",
+      "relationshipName": "adresse",
+      "otherEntityName": "adresse",
+      "otherEntityRelationshipName": "collaborateur"
+    },
+    {
+      "relationshipId": 4,
+      "relationshipType": "one-to-many",
+      "relationshipName": "fonction",
+      "otherEntityName": "fonction",
+      "otherEntityRelationshipName": "collaborateur"
+    },
+    {
+      "relationshipId": 5,
+      "relationshipType": "one-to-many",
+      "relationshipName": "classification",
+      "otherEntityName": "classification",
+      "otherEntityRelationshipName": "collaborateur"
+    },
+    {
+      "relationshipId": 6,
+      "relationshipType": "one-to-many",
+      "relationshipName": "formation",
+      "otherEntityName": "formation",
+      "otherEntityRelationshipName": "collaborateur"
+    },
+    {
+      "relationshipId": 7,
+      "relationshipType": "one-to-many",
+      "relationshipName": "publication",
+      "otherEntityName": "publication",
+      "otherEntityRelationshipName": "collaborateur"
+    },
+    {
+      "relationshipId": 8,
+      "relationshipType": "one-to-many",
+      "relationshipName": "diplome",
+      "otherEntityName": "diplome",
+      "otherEntityRelationshipName": "collaborateur"
+    },
+    {
+      "relationshipId": 9,
+      "relationshipType": "one-to-many",
+      "relationshipName": "experience",
+      "otherEntityName": "experience",
+      "otherEntityRelationshipName": "collaborateur"
+    },
+    {
+      "relationshipId": 10,
+      "relationshipType": "one-to-many",
+      "relationshipName": "cv",
+      "otherEntityName": "cv",
+      "otherEntityRelationshipName": "collaborateur"
+    },
+    {
+      "relationshipId": 11,
+      "relationshipType": "one-to-many",
+      "relationshipName": "competence",
+      "otherEntityName": "competence",
+      "otherEntityRelationshipName": "collaborateur"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "collaborateurNom",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "collaborateurPrenom",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "collaborateurDateNaissance",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "collaborateurSexe",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "collaborateurEtatMarital",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "collaborateurNombreEnfant",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "collaborateurLangue",
+      "fieldType": "Langue",
+      "fieldValues": "FRANCAIS,ANGLAIS,ALLEMAND,ESPAGNOL,AUTRE"
+    }
+  ],
+  "changelogDate": "20160616152930",
+  "dto": "no",
+  "pagination": "infinite-scroll",
+  "service": "no",
+  "entityTableName": "collaborateur"
+}

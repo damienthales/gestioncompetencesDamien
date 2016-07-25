@@ -1,0 +1,152 @@
+entity Collaborateur {
+	collaborateurNom String required,
+	collaborateurPrenom String required,
+	collaborateurDateNaissance ZonedDateTime required,
+	collaborateurSexe String required,
+	collaborateurEtatMarital String required,
+	collaborateurNombreEnfant String,
+	collaborateurLangue Langue
+}
+
+
+entity Adresse{
+	adresseNumero String required,
+	adresseVoie String required,
+	adresseVoie2 String,
+	adresseCodePostal String required,
+	adresseVille String required,
+	adressePays String
+}
+
+entity Fonction{
+	fonctionNom String required
+	fonctionDateDebut ZonedDateTime required,
+	fonctionDateFin ZonedDateTime
+}
+
+enum Langue{
+	FRANCAIS, ANGLAIS, ALLEMAND, ESPAGNOL, AUTRE
+}
+
+entity Classification{
+	classificationNom String
+	classificationDateDebut ZonedDateTime required,
+	classificationDateFin ZonedDateTime
+}
+
+entity Formation{
+	formationNom String,
+	formationDate ZonedDateTime required,
+}
+
+entity Publication{
+	publicationNom String,
+	publicationDate ZonedDateTime required,
+}
+
+entity Diplome{
+	diplomeNom String
+	diplomeDate ZonedDateTime,
+	
+	
+}
+
+entity Experience{
+	experienceNom String required,
+	experienceTypeExperience TypeExperience
+}
+
+enum TypeExperience{
+	PRO, EXTRA, HOBBIE
+}
+
+entity Cv{
+	dateCv ZonedDateTime
+	libelle String
+}
+
+entity Rubrique{
+	rubriqueLibelle String required,
+	rubriqueObligatoire Boolean
+}
+
+entity Competence{
+	competenceLibelle String,
+	competenceAnneesexperiences Long,
+	competenceClient String,
+	competenceNiveaucompetence Niveaucompetence
+}
+
+entity DonneesCollaborateur{
+	descriptionRubriqueCollaborateur String
+}
+
+
+enum Niveaucompetence{
+	DECOUVRTE, OPERATIONNELLE, MAITRISE, EXPERT
+}
+
+entity Email{
+	emailLibelle String
+}
+
+entity Telephone{
+	telephoneNumero String
+}
+
+relationship OneToOne {
+	DonneesCollaborateur{rubrique} to Rubrique
+}
+
+relationship OneToMany {
+        Collaborateur{donneeRubrique} to Rubrique
+}
+
+
+relationship OneToMany {
+	Collaborateur{email} to Email{collaborateur}
+}
+
+relationship OneToMany {
+	Collaborateur{adresse} to Adresse{collaborateur}
+}
+
+relationship OneToMany {
+	Collaborateur{fonction} to Fonction{collaborateur}
+
+}
+
+relationship OneToMany {
+	Collaborateur{classification} to Classification{collaborateur}
+}
+
+relationship OneToMany {
+	Collaborateur{formation} to Formation{collaborateur}
+}
+
+
+relationship OneToMany {
+	Collaborateur{publication} to Publication{collaborateur}
+}
+
+relationship OneToMany {
+	Collaborateur{diplome} to Diplome{collaborateur}
+}
+
+relationship OneToMany {
+	Collaborateur{experience} to Experience{collaborateur}
+}
+
+relationship OneToMany {
+	Collaborateur{cv} to Cv{collaborateur}
+}
+
+relationship OneToMany {
+	Rubrique{cv} to Cv{rubrique}
+}
+
+relationship OneToMany {
+	Collaborateur{competence} to Competence{collaborateur}
+}
+
+paginate Collaborateur with infinite-scroll

@@ -1,0 +1,39 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipType": "many-to-one",
+      "relationshipName": "collaborateur",
+      "otherEntityName": "collaborateur",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "competenceLibelle",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "competenceAnneesexperiences",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "competenceClient",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "competenceNiveaucompetence",
+      "fieldType": "Niveaucompetence",
+      "fieldValues": "DECOUVRTE,OPERATIONNELLE,MAITRISE,EXPERT"
+    }
+  ],
+  "changelogDate": "20160616152940",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "competence"
+}

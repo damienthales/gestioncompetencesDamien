@@ -1,0 +1,25 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipType": "one-to-one",
+      "relationshipName": "rubrique",
+      "otherEntityName": "rubrique",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "donneesCollaborateur"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "descriptionRubriqueCollaborateur",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160616152941",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "donnees_collaborateur"
+}

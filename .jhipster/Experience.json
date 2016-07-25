@@ -1,0 +1,32 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipType": "many-to-one",
+      "relationshipName": "collaborateur",
+      "otherEntityName": "collaborateur",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "experienceNom",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "experienceTypeExperience",
+      "fieldType": "TypeExperience",
+      "fieldValues": "PRO,EXTRA,HOBBIE"
+    }
+  ],
+  "changelogDate": "20160616152937",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "experience"
+}

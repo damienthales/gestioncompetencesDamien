@@ -1,0 +1,38 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "collaborateur",
+      "otherEntityName": "collaborateur",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipType": "one-to-many",
+      "relationshipName": "cv",
+      "otherEntityName": "cv",
+      "otherEntityRelationshipName": "rubrique"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "rubriqueLibelle",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "rubriqueObligatoire",
+      "fieldType": "Boolean"
+    }
+  ],
+  "changelogDate": "20160616152939",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "rubrique"
+}
